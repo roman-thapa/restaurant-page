@@ -13,30 +13,21 @@ const menu = document.querySelector("#menu");
 const contact = document.querySelector("#contact");
 const container = document.createElement("div");
 content.appendChild(container)
-content.appendChild(homeContent);
+container.appendChild(homeContent);
 
 function handleHomeCLick() {
-    if (container.hasChildNodes()) {
       container.removeChild(container.firstChild);
       container.appendChild(homeContent);
-    }
-    container.appendChild(homeContent)
 }
 
 function handleMenuClick() {
-  if (container.hasChildNodes()) {
     container.removeChild(container.firstChild);
     container.appendChild(images);
-  }
-  container.appendChild(images);
 }
 
 function handleContactClick() {
-  if (container.hasChildNodes()) {
     container.removeChild(container.firstChild);
     container.appendChild(contactContent);
-  }
-  container.appendChild(contactContent);
 }
 
 home.addEventListener('click', handleHomeCLick);
